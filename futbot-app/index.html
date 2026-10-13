@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Futbot App</title>
+  <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android download.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    /* Colors match the app theme (futbot-app/src/theme/tokens.ts) */
+    :root {
+      --bg: #ffffff; --text: #111827; --muted: #4b5563; --border: #d1d5db;
+      --primary: #5cc888; --on-primary: #052139; --primary-text: #166534; --highlight: #dcfce7;
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, sans-serif; }
+    main { max-width: 36rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; }
+    .langs { display: flex; justify-content: flex-end; gap: .5rem; }
+    .langs button { font: inherit; font-size: .875rem; min-width: 2.75rem; padding: .35rem .7rem;
+      border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--text); cursor: pointer; }
+    .langs button[aria-pressed="true"] { background: var(--highlight); border-color: var(--primary-text);
+      color: var(--primary-text); font-weight: 600; }
+    header { text-align: center; margin: 1rem 0 1.5rem; }
+    .logo { width: 7.5rem; height: 7.5rem; }
+    h1 { margin: .75rem 0 .25rem; color: var(--on-primary); }
+    h2 { font-size: 1.1rem; margin: 0 0 .5rem; color: var(--on-primary); }
+    .tagline { margin: 0; color: var(--muted); }
+    .version { color: var(--muted); margin: .75rem 0 0; font-size: .9rem; }
+    .button { display: block; text-align: center; background: var(--primary); color: var(--on-primary);
+      padding: .9rem 1rem; border-radius: .75rem; font-weight: 700; text-decoration: none; }
+    .button:focus-visible, .langs button:focus-visible { outline: 3px solid var(--primary-text); outline-offset: 2px; }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: .75rem; padding: 1rem 1.25rem; margin-top: 1.25rem; }
+    .card.install { background: var(--highlight); border-color: var(--primary-text); }
+    .card p { margin: 0; }
+    ul, ol { padding-left: 1.2rem; margin: .5rem 0 0; }
+    li + li { margin-top: .25rem; }
+    em { font-style: normal; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="langs" aria-label="Language">
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="ca" lang="ca" aria-pressed="false">CA</button>
+    </nav>
+
+    <header>
+      <img class="logo" src="logo.png" alt="Futbot logo: a smiling robot shaped like a football">
+      <h1>Futbot App</h1>
+      <p class="tagline" data-i18n="tagline">Your team's football, in your pocket.</p>
+      <!-- UPDATE per release: VERSION below and the EAS build URL on the button -->
+      <p class="version"><span data-i18n="platform">Android</span> &middot; <span data-i18n="version">Version</span> <span id="v">0.18.4</span></p>
+    </header>
+
+    <a class="button" data-i18n="download" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/576d1bda-6008-43ae-b38b-f66be45ebbf8">Download the latest build</a>
+
+    <section class="card">
+      <h2 data-i18n="whatTitle">What is Futbot?</h2>
+      <p data-i18n="whatBody">Futbot is a football companion for players, parents and coaches. Pick your team and get its season in one place, then ask the Futbot assistant anything about it in plain language.</p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="doTitle">What can it do?</h2>
+      <ul>
+        <li data-i18n-html="do1"><strong>Matches and matchdays:</strong> results, fixtures and match details.</li>
+        <li data-i18n-html="do2"><strong>Standings:</strong> the league table for your team's competition.</li>
+        <li data-i18n-html="do3"><strong>Squad and players:</strong> browse the squad and individual player pages.</li>
+        <li data-i18n-html="do4"><strong>Top scorers:</strong> the Pichichi ranking.</li>
+        <li data-i18n-html="do5"><strong>Chat with Futbot:</strong> ask questions about your selected team and get answers in English, Spanish or Catalan.</li>
+        <li data-i18n-html="do6"><strong>Several teams:</strong> follow more than one team and switch between them any time.</li>
+      </ul>
+    </section>
+
+    <section class="card install">
+      <h2 data-i18n="installTitle">How to install</h2>
+      <ol>
+        <li data-i18n-html="i1">Open this page on your Android phone and tap the button above.</li>
+        <li data-i18n-html="i2">On the Expo page, tap <em>Install</em> and download the APK.</li>
+        <li data-i18n-html="i3">If Android asks, allow installing apps from this source.</li>
+        <li data-i18n-html="i4">Open the downloaded file and tap <em>Install</em>. Play Protect may show a warning, since the app is not from the Play Store.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    var T = {
+      en: {
+        title: 'Futbot App', tagline: "Your team's football, in your pocket.", platform: 'Android', version: 'Version',
+        download: 'Download the latest build',
+        whatTitle: 'What is Futbot?',
+        whatBody: 'Futbot is a football companion for players, parents and coaches. Pick your team and get its season in one place, then ask the Futbot assistant anything about it in plain language.',
+        doTitle: 'What can it do?',
+        do1: '<strong>Matches and matchdays:</strong> results, fixtures and match details.',
+        do2: "<strong>Standings:</strong> the league table for your team's competition.",
+        do3: '<strong>Squad and players:</strong> browse the squad and individual player pages.',
+        do4: '<strong>Top scorers:</strong> the Pichichi ranking.',
+        do5: '<strong>Chat with Futbot:</strong> ask questions about your selected team and get answers in English, Spanish or Catalan.',
+        do6: '<strong>Several teams:</strong> follow more than one team and switch between them any time.',
+        installTitle: 'How to install',
+        i1: 'Open this page on your Android phone and tap the button above.',
+        i2: 'On the Expo page, tap <em>Install</em> and download the APK.',
+        i3: 'If Android asks, allow installing apps from this source.',
+        i4: 'Open the downloaded file and tap <em>Install</em>. Play Protect may show a warning, since the app is not from the Play Store.'
+      },
+      es: {
+        title: 'Futbot App', tagline: 'El fútbol de tu equipo, en tu bolsillo.', platform: 'Android', version: 'Versión',
+        download: 'Descargar la última versión',
+        whatTitle: '¿Qué es Futbot?',
+        whatBody: 'Futbot es un compañero de fútbol para jugadores, familias y entrenadores. Elige tu equipo y consulta su temporada en un solo lugar; después pregunta al asistente de Futbot lo que quieras en lenguaje natural.',
+        doTitle: '¿Qué puede hacer?',
+        do1: '<strong>Partidos y jornadas:</strong> resultados, calendario y detalles de cada partido.',
+        do2: '<strong>Clasificación:</strong> la tabla de la competición de tu equipo.',
+        do3: '<strong>Plantilla y jugadores:</strong> consulta la plantilla y la ficha de cada jugador.',
+        do4: '<strong>Goleadores:</strong> la clasificación del Pichichi.',
+        do5: '<strong>Chat con Futbot:</strong> pregunta sobre tu equipo seleccionado y recibe respuestas en español, catalán o inglés.',
+        do6: '<strong>Varios equipos:</strong> sigue a más de un equipo y cambia de uno a otro cuando quieras.',
+        installTitle: 'Cómo instalar',
+        i1: 'Abre esta página en tu móvil Android y toca el botón de arriba.',
+        i2: 'En la página de Expo, toca <em>Install</em> y descarga el APK.',
+        i3: 'Si Android lo pide, permite instalar aplicaciones desde esta fuente.',
+        i4: 'Abre el archivo descargado y toca <em>Instalar</em>. Play Protect puede mostrar un aviso, porque la app no viene de Play Store.'
+      },
+      ca: {
+        title: 'Futbot App', tagline: "El futbol del teu equip, a la butxaca.", platform: 'Android', version: 'Versió',
+        download: "Descarrega l'última versió",
+        whatTitle: 'Què és Futbot?',
+        whatBody: "Futbot és un company de futbol per a jugadors, famílies i entrenadors. Tria el teu equip i consulta la seva temporada en un sol lloc; després pregunta a l'assistent de Futbot el que vulguis en llenguatge natural.",
+        doTitle: 'Què pot fer?',
+        do1: '<strong>Partits i jornades:</strong> resultats, calendari i detalls de cada partit.',
+        do2: "<strong>Classificació:</strong> la taula de la competició del teu equip.",
+        do3: '<strong>Plantilla i jugadors:</strong> consulta la plantilla i la fitxa de cada jugador.',
+        do4: '<strong>Golejadors:</strong> la classificació del Pichichi.',
+        do5: '<strong>Xat amb Futbot:</strong> pregunta sobre el teu equip seleccionat i rep respostes en català, castellà o anglès.',
+        do6: '<strong>Diversos equips:</strong> segueix més d\'un equip i canvia de l\'un a l\'altre quan vulguis.',
+        installTitle: 'Com instal·lar',
+        i1: "Obre aquesta pàgina al teu mòbil Android i toca el botó de dalt.",
+        i2: "A la pàgina d'Expo, toca <em>Install</em> i descarrega l'APK.",
+        i3: "Si Android ho demana, permet instal·lar aplicacions des d'aquesta font.",
+        i4: "Obre el fitxer descarregat i toca <em>Instal·la</em>. Play Protect pot mostrar un avís, perquè l'aplicació no ve de Play Store."
+      }
+    };
+
+    function setLang(lang) {
+      var d = T[lang] || T.en;
+      document.documentElement.lang = lang;
+      document.title = d.title;
+      document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = d[el.dataset.i18n]; });
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) { el.innerHTML = d[el.dataset.i18nHtml]; });
+      document.querySelectorAll('.langs button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+      });
+    }
+
+    function initialLang() {
+      var q = new URLSearchParams(location.search).get('lang');
+      if (T[q]) return q;
+      try { var s = localStorage.getItem('lang'); if (T[s]) return s; } catch (e) {}
+      var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      return T[n] ? n : 'en';
+    }
+
+    document.querySelectorAll('.langs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        setLang(b.dataset.lang);
+        try { localStorage.setItem('lang', b.dataset.lang); } catch (e) {}
+      });
+    });
+    setLang(initialLang());
+  </script>
+</body>
+</html>
