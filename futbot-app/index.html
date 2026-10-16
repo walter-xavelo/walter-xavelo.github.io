@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Futbot App</title>
-  <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android download.">
+  <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android download available; iOS coming soon.">
   <link rel="icon" type="image/png" href="logo.png">
   <style>
     /* Colors match the app theme (futbot-app/src/theme/tokens.ts) */
@@ -26,9 +26,21 @@
     h2 { font-size: 1.1rem; margin: 0 0 .5rem; color: var(--on-primary); }
     .tagline { margin: 0; color: var(--muted); }
     .version { color: var(--muted); margin: .75rem 0 0; font-size: .9rem; }
+    .platforms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+    .platform-card { min-width: 0; padding: 1rem; border: 1px solid var(--primary-text);
+      border-radius: .75rem; background: var(--highlight); text-align: center; }
+    a.platform-card { display: block; color: var(--text); text-decoration: none; }
+    a.platform-card:focus-visible { outline: 3px solid var(--primary-text); outline-offset: 2px; }
+    .platform-card.unavailable { border-color: var(--border); background: #f3f4f6; color: #6b7280; }
+    .platform-logo { display: block; width: 2.25rem; height: 2.25rem; margin: 0 auto .4rem; color: currentColor; }
+    .platform-card.android .platform-logo { color: #3ddc84; }
+    .platform-name { display: block; margin-bottom: .65rem; font-weight: 700; }
     .button { display: block; text-align: center; background: var(--primary); color: var(--on-primary);
-      padding: .9rem 1rem; border-radius: .75rem; font-weight: 700; text-decoration: none; }
+      width: 100%; box-sizing: border-box; padding: .75rem .5rem; border: 0; border-radius: .6rem;
+      font: inherit; font-weight: 700; text-decoration: none; }
     .button:focus-visible, .langs button:focus-visible { outline: 3px solid var(--primary-text); outline-offset: 2px; }
+    .button:disabled { background: #d1d5db; color: #4b5563; cursor: not-allowed; }
+    @media (max-width: 24rem) { .platforms { grid-template-columns: 1fr; } }
     .card { background: #fff; border: 1px solid var(--border); border-radius: .75rem; padding: 1rem 1.25rem; margin-top: 1.25rem; }
     .card.install { background: var(--highlight); border-color: var(--primary-text); }
     .card p { margin: 0; }
@@ -49,11 +61,33 @@
       <img class="logo" src="logo.png" alt="Futbot logo: a smiling robot shaped like a football">
       <h1>Futbot App</h1>
       <p class="tagline" data-i18n="tagline">Your team's football, in your pocket.</p>
-      <!-- UPDATE per release: VERSION below and the EAS build URL on the button -->
+      <!-- UPDATE per release: VERSION below and the Android EAS build URL below -->
       <p class="version"><span data-i18n="platform">Android</span> &middot; <span data-i18n="version">Version</span> <span id="v">0.37.1</span></p>
     </header>
 
-    <a class="button" data-i18n="download" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/d9b13dfe-2765-4fea-a576-14d1035178c4">Download the latest build</a>
+    <section class="platforms" aria-label="App downloads" data-i18n-aria="downloadsLabel">
+      <a class="platform-card android" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/d9b13dfe-2765-4fea-a576-14d1035178c4">
+        <svg class="platform-logo" role="img" aria-label="Android" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <g fill="currentColor">
+            <path d="M12.2 17.5a11.8 11.8 0 0 1 23.6 0v1H12.2z"/>
+            <path d="M10.2 20.5h27.6v14.2a3.3 3.3 0 0 1-3.3 3.3h-21a3.3 3.3 0 0 1-3.3-3.3z"/>
+            <rect x="4.5" y="21" width="4" height="14" rx="2"/><rect x="39.5" y="21" width="4" height="14" rx="2"/>
+            <rect x="14" y="36" width="5" height="9" rx="2.5"/><rect x="29" y="36" width="5" height="9" rx="2.5"/>
+          </g>
+          <g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="m15 8-3-4M33 8l3-4"/></g>
+          <g fill="#fff"><circle cx="19" cy="14" r="1"/><circle cx="29" cy="14" r="1"/></g>
+        </svg>
+        <span class="platform-name">Android</span>
+        <span class="button" data-i18n="downloadAndroid">Download for Android</span>
+      </a>
+      <div class="platform-card unavailable" aria-describedby="ios-status">
+        <svg class="platform-logo" role="img" aria-label="iOS" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M32.7 25.3c0-4 3.3-5.9 3.4-6-1.9-2.8-4.9-3.2-6-3.2-2.6-.3-5.1 1.5-6.4 1.5-1.3 0-3.3-1.5-5.4-1.4-2.8 0-5.4 1.6-6.8 4-2.9 5-.7 12.4 2.1 16.5 1.4 2 3 4.2 5.1 4.1 2-.1 2.8-1.3 5.3-1.3s3.2 1.3 5.4 1.2c2.2 0 3.6-2 5-4 1.6-2.3 2.2-4.5 2.2-4.6-.1 0-4-1.5-4-6.8ZM28.5 13.4c1.1-1.3 1.9-3.1 1.7-4.9-1.6.1-3.5 1.1-4.6 2.4-1 1.1-1.9 3-1.7 4.7 1.8.1 3.6-.9 4.6-2.2Z"/>
+        </svg>
+        <span class="platform-name">iOS</span>
+        <button class="button" id="ios-status" type="button" disabled data-i18n="iosComing">Not available yet</button>
+      </div>
+    </section>
 
     <section class="card">
       <h2 data-i18n="whatTitle">What is Futbot?</h2>
@@ -87,7 +121,7 @@
     var T = {
       en: {
         title: 'Futbot App', tagline: "Your team's football, in your pocket.", platform: 'Android', version: 'Version',
-        download: 'Download the latest build',
+        downloadsLabel: 'App downloads', downloadAndroid: 'Download for Android', iosComing: 'Not available yet',
         whatTitle: 'What is Futbot?',
         whatBody: 'Futbot is a football companion for players, parents and coaches. Pick your team and get its season in one place, then ask the Futbot assistant anything about it in plain language.',
         doTitle: 'What can it do?',
@@ -105,7 +139,7 @@
       },
       es: {
         title: 'Futbot App', tagline: 'El fútbol de tu equipo, en tu bolsillo.', platform: 'Android', version: 'Versión',
-        download: 'Descargar la última versión',
+        downloadsLabel: 'Descargas de la aplicación', downloadAndroid: 'Descargar para Android', iosComing: 'Aún no disponible',
         whatTitle: '¿Qué es Futbot?',
         whatBody: 'Futbot es un compañero de fútbol para jugadores, familias y entrenadores. Elige tu equipo y consulta su temporada en un solo lugar; después pregunta al asistente de Futbot lo que quieras en lenguaje natural.',
         doTitle: '¿Qué puede hacer?',
@@ -123,7 +157,7 @@
       },
       ca: {
         title: 'Futbot App', tagline: "El futbol del teu equip, a la butxaca.", platform: 'Android', version: 'Versió',
-        download: "Descarrega l'última versió",
+        downloadsLabel: 'Descàrregues de l’aplicació', downloadAndroid: 'Descarrega per a Android', iosComing: 'Encara no disponible',
         whatTitle: 'Què és Futbot?',
         whatBody: "Futbot és un company de futbol per a jugadors, famílies i entrenadors. Tria el teu equip i consulta la seva temporada en un sol lloc; després pregunta a l'assistent de Futbot el que vulguis en llenguatge natural.",
         doTitle: 'Què pot fer?',
@@ -147,6 +181,7 @@
       document.title = d.title;
       document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = d[el.dataset.i18n]; });
       document.querySelectorAll('[data-i18n-html]').forEach(function (el) { el.innerHTML = d[el.dataset.i18nHtml]; });
+      document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { el.setAttribute('aria-label', d[el.dataset.i18nAria]); });
       document.querySelectorAll('.langs button').forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
       });
