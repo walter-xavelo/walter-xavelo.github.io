@@ -8,7 +8,8 @@ Landing page for the Futbot mobile app: https://walter-xavelo.github.io/futbot-a
 
 It provides separate Android and iOS choices in English, Spanish and Catalan. Android links to
 the latest EAS build and has sideload instructions. iOS is shown as unavailable and disabled until
-a verified distribution link is provided; do not add a placeholder URL.
+a verified distribution link is provided; do not add a placeholder URL. The page also highlights
+team following, Premium player tracking and optional Android final-result notification settings.
 
 ### Releasing a new build
 
