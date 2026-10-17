@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Futbot App</title>
-  <meta name="futbot-site-version" content="0.2.1">
+  <meta name="futbot-site-version" content="0.2.2">
   <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android and iOS downloads available.">
   <link rel="icon" type="image/png" href="logo.png">
   <style>
@@ -34,7 +37,8 @@
     a.platform-card:focus-visible { outline: 3px solid var(--primary-text); outline-offset: 2px; }
     .platform-logo { display: block; width: 2.25rem; height: 2.25rem; margin: 0 auto .4rem; color: currentColor; }
     .platform-card.android .platform-logo { color: #3ddc84; }
-    .platform-name { display: block; margin-bottom: .65rem; font-weight: 700; }
+    .platform-name { display: block; font-weight: 700; }
+    .platform-version { display: block; margin-bottom: .65rem; color: var(--muted); font-size: .9rem; }
     .button { display: block; text-align: center; background: var(--primary); color: var(--on-primary);
       width: 100%; box-sizing: border-box; padding: .75rem .5rem; border: 0; border-radius: .6rem;
       font: inherit; font-weight: 700; text-decoration: none; }
@@ -60,12 +64,11 @@
       <img class="logo" src="logo.png" alt="Futbot logo: a smiling robot shaped like a football">
       <h1>Futbot App</h1>
       <p class="tagline" data-i18n="tagline">Your team's football, in your pocket.</p>
-      <!-- UPDATE per release: VERSION below and the Android EAS build URL below -->
-      <p class="version"><span data-i18n="version">Version</span> <span id="v">0.40.0</span></p>
     </header>
 
+    <!-- UPDATE per release: each platform has its own version and EAS build URL -->
     <section class="platforms" aria-label="App downloads" data-i18n-aria="downloadsLabel">
-      <a class="platform-card android" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/039cf481-8f95-48fb-918b-8e057fc791bb">
+      <a class="platform-card android" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/4cf4cadf-a113-4a2e-b11d-a87fac4b74a0">
         <svg class="platform-logo" role="img" aria-label="Android" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <g fill="currentColor">
             <path d="M12.2 17.5a11.8 11.8 0 0 1 23.6 0v1H12.2z"/>
@@ -77,6 +80,7 @@
           <g fill="#fff"><circle cx="19" cy="14" r="1"/><circle cx="29" cy="14" r="1"/></g>
         </svg>
         <span class="platform-name">Android</span>
+        <span class="platform-version"><span data-i18n="version">Version</span> <span id="v-android">0.44.0</span></span>
         <span class="button" data-i18n="downloadAndroid">Download for Android</span>
       </a>
       <a class="platform-card ios" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/3b5c93fd-fe49-4ee7-9e66-dbc39cfd9b6f">
@@ -84,6 +88,7 @@
           <path fill="currentColor" d="M32.7 25.3c0-4 3.3-5.9 3.4-6-1.9-2.8-4.9-3.2-6-3.2-2.6-.3-5.1 1.5-6.4 1.5-1.3 0-3.3-1.5-5.4-1.4-2.8 0-5.4 1.6-6.8 4-2.9 5-.7 12.4 2.1 16.5 1.4 2 3 4.2 5.1 4.1 2-.1 2.8-1.3 5.3-1.3s3.2 1.3 5.4 1.2c2.2 0 3.6-2 5-4 1.6-2.3 2.2-4.5 2.2-4.6-.1 0-4-1.5-4-6.8ZM28.5 13.4c1.1-1.3 1.9-3.1 1.7-4.9-1.6.1-3.5 1.1-4.6 2.4-1 1.1-1.9 3-1.7 4.7 1.8.1 3.6-.9 4.6-2.2Z"/>
         </svg>
         <span class="platform-name">iOS</span>
+        <span class="platform-version"><span data-i18n="version">Version</span> <span id="v-ios">0.40.0</span></span>
         <span class="button" data-i18n="downloadIos">Download for iOS</span>
       </a>
     </section>
