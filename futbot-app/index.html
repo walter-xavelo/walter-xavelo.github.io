@@ -8,7 +8,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Futbot App</title>
-  <meta name="futbot-site-version" content="0.2.2">
+  <meta name="futbot-site-version" content="0.3.0">
   <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android and iOS downloads available.">
   <link rel="icon" type="image/png" href="logo.png">
   <style>
@@ -81,7 +81,7 @@
         </svg>
         <span class="platform-name">Android</span>
         <span class="platform-version"><span data-i18n="version">Version</span> <span id="v-android">0.44.0</span></span>
-        <span class="button" data-i18n="downloadAndroid">Download for Android</span>
+        <span class="button" data-i18n="downloadAndroid">Download</span>
       </a>
       <a class="platform-card ios" href="https://expo.dev/accounts/xavelo_ai/projects/futbot-app/builds/3b5c93fd-fe49-4ee7-9e66-dbc39cfd9b6f">
         <svg class="platform-logo" role="img" aria-label="iOS" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@
         </svg>
         <span class="platform-name">iOS</span>
         <span class="platform-version"><span data-i18n="version">Version</span> <span id="v-ios">0.40.0</span></span>
-        <span class="button" data-i18n="downloadIos">Download for iOS</span>
+        <span class="button" data-i18n="downloadIos">Download</span>
       </a>
     </section>
 
@@ -114,7 +114,7 @@
 
     <section class="card install">
       <h2 data-i18n="installTitle">How to install</h2>
-      <p data-i18n="iosInstall">For iOS, open this page on your iPhone, choose Download for iOS and follow the instructions on the Expo build page.</p>
+      <p data-i18n="iosInstall">For iOS, open this page on your iPhone, choose Download on the iOS card and follow the instructions on the Expo build page.</p>
       <h3>Android</h3>
       <ol>
         <li data-i18n-html="i1">Open this page on your Android phone and tap the button above.</li>
@@ -129,7 +129,7 @@
     var T = {
       en: {
         title: 'Futbot App', tagline: "Your team's football, in your pocket.", version: 'Version',
-        downloadsLabel: 'App downloads', downloadAndroid: 'Download for Android', downloadIos: 'Download for iOS',
+        downloadsLabel: 'App downloads', downloadAndroid: 'Download', downloadIos: 'Download',
         whatTitle: 'What is Futbot?',
         whatBody: 'Futbot is a football companion for players, parents and coaches. Pick your team and get its season in one place, then ask the Futbot assistant anything about it in plain language.',
         doTitle: 'What can it do?',
@@ -142,7 +142,7 @@
         do7: '<strong>Player tracking (Premium):</strong> save players to your list and see their stats and next match.',
         do8: '<strong>Android notifications:</strong> manage optional final-result alerts for teams you follow.',
         installTitle: 'How to install',
-        iosInstall: 'For iOS, open this page on your iPhone, choose Download for iOS and follow the instructions on the Expo build page.',
+        iosInstall: 'For iOS, open this page on your iPhone, choose Download on the iOS card and follow the instructions on the Expo build page.',
         i1: 'Open this page on your Android phone and tap the button above.',
         i2: 'On the Expo page, tap <em>Install</em> and download the APK.',
         i3: 'If Android asks, allow installing apps from this source.',
@@ -150,7 +150,7 @@
       },
       es: {
         title: 'Futbot App', tagline: 'El fútbol de tu equipo, en tu bolsillo.', version: 'Versión',
-        downloadsLabel: 'Descargas de la aplicación', downloadAndroid: 'Descargar para Android', downloadIos: 'Descargar para iOS',
+        downloadsLabel: 'Descargas de la aplicación', downloadAndroid: 'Descargar', downloadIos: 'Descargar',
         whatTitle: '¿Qué es Futbot?',
         whatBody: 'Futbot es un compañero de fútbol para jugadores, familias y entrenadores. Elige tu equipo y consulta su temporada en un solo lugar; después pregunta al asistente de Futbot lo que quieras en lenguaje natural.',
         doTitle: '¿Qué puede hacer?',
@@ -163,7 +163,7 @@
         do7: '<strong>Seguimiento de jugadores (Premium):</strong> guarda jugadores en tu lista y consulta sus estadísticas y próximo partido.',
         do8: '<strong>Notificaciones en Android:</strong> configura alertas opcionales de resultados finales para los equipos que sigues.',
         installTitle: 'Cómo instalar',
-        iosInstall: 'Para iOS, abre esta página en tu iPhone, elige Descargar para iOS y sigue las instrucciones de la página de Expo.',
+        iosInstall: 'Para iOS, abre esta página en tu iPhone, elige Descargar en la tarjeta de iOS y sigue las instrucciones de la página de Expo.',
         i1: 'Abre esta página en tu móvil Android y toca el botón de arriba.',
         i2: 'En la página de Expo, toca <em>Install</em> y descarga el APK.',
         i3: 'Si Android lo pide, permite instalar aplicaciones desde esta fuente.',
@@ -171,7 +171,7 @@
       },
       ca: {
         title: 'Futbot App', tagline: "El futbol del teu equip, a la butxaca.", version: 'Versió',
-        downloadsLabel: 'Descàrregues de l’aplicació', downloadAndroid: 'Descarrega per a Android', downloadIos: 'Descarrega per a iOS',
+        downloadsLabel: 'Descàrregues de l’aplicació', downloadAndroid: 'Descarrega', downloadIos: 'Descarrega',
         whatTitle: 'Què és Futbot?',
         whatBody: "Futbot és un company de futbol per a jugadors, famílies i entrenadors. Tria el teu equip i consulta la seva temporada en un sol lloc; després pregunta a l'assistent de Futbot el que vulguis en llenguatge natural.",
         doTitle: 'Què pot fer?',
@@ -184,7 +184,7 @@
         do7: '<strong>Seguiment de jugadors (Premium):</strong> desa jugadors a la teva llista i consulta les seves estadístiques i el pròxim partit.',
         do8: '<strong>Notificacions a Android:</strong> configura alertes opcionals de resultats finals per als equips que segueixes.',
         installTitle: 'Com instal·lar',
-        iosInstall: 'Per a iOS, obre aquesta pàgina al teu iPhone, tria Descarrega per a iOS i segueix les instruccions de la pàgina d’Expo.',
+        iosInstall: 'Per a iOS, obre aquesta pàgina al teu iPhone, tria Descarrega a la targeta d’iOS i segueix les instruccions de la pàgina d’Expo.',
         i1: "Obre aquesta pàgina al teu mòbil Android i toca el botó de dalt.",
         i2: "A la pàgina d'Expo, toca <em>Install</em> i descarrega l'APK.",
         i3: "Si Android ho demana, permet instal·lar aplicacions des d'aquesta font.",
