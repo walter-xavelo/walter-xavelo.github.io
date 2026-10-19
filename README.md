@@ -9,7 +9,10 @@ Landing page for the Futbot mobile app: https://walter-xavelo.github.io/futbot-a
 It provides separate Android and iOS choices in English, Spanish and Catalan. Both link to
 platform-specific EAS builds using active green cards. Android has APK sideload instructions;
 iOS users follow the instructions on its Expo build page. The page also highlights
-team following, Premium player tracking and optional Android final-result notification settings.
+team and player tracking, optional Android final-result notification settings, AI match forecasts,
+the AI 1X2 matchday quiniela and club information. Feature descriptions in all three languages
+avoid subscription-plan labels. The quiniela explains that X means no clear favorite and that
+insufficient data can leave a match without a pick.
 
 ### Releasing a new build
 
