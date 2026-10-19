@@ -8,8 +8,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Futbot App</title>
-  <meta name="futbot-site-version" content="0.8.0">
-  <meta name="description" content="Futbot: your team's matches, standings, squad and an assistant that answers your football questions. Android and iOS downloads available.">
+  <meta name="futbot-site-version" content="0.9.0">
+  <meta name="description" content="Futbot: your team's matches, standings, squad, club, AI forecasts and AI 1X2 matchday quiniela, with a football assistant. Android and iOS downloads available.">
   <link rel="icon" type="image/png" href="logo.png">
   <style>
     /* Colors match the app theme (futbot-app/src/theme/tokens.ts) */
@@ -107,8 +107,11 @@
         <li data-i18n-html="do4"><strong>Top scorers:</strong> the Pichichi ranking.</li>
         <li data-i18n-html="do5"><strong>Chat with Futbot:</strong> ask questions about your selected team and get answers in English, Spanish or Catalan.</li>
         <li data-i18n-html="do6"><strong>Team tracking:</strong> follow multiple teams and switch between them.</li>
-        <li data-i18n-html="do7"><strong>Player tracking (Premium):</strong> save players to your list and see their stats and next match.</li>
+        <li data-i18n-html="do7"><strong>Player tracking:</strong> save players to your list and see their stats and next match.</li>
         <li data-i18n-html="do8"><strong>Android notifications:</strong> manage optional final-result alerts for teams you follow.</li>
+        <li data-i18n-html="do9"><strong>AI match forecasts:</strong> explore the next match using standings, home and away form, and recent results.</li>
+        <li data-i18n-html="do10"><strong>AI 1X2 quiniela:</strong> see the current matchday’s favorites and the reasons behind each pick. X means no clear favorite; matches without enough data have no pick.</li>
+        <li data-i18n-html="do11"><strong>Club information:</strong> discover your club, its teams and available official links.</li>
       </ul>
     </section>
 
@@ -139,8 +142,11 @@
         do4: '<strong>Top scorers:</strong> the Pichichi ranking.',
         do5: '<strong>Chat with Futbot:</strong> ask questions about your selected team and get answers in English, Spanish or Catalan.',
         do6: '<strong>Team tracking:</strong> follow multiple teams and switch between them.',
-        do7: '<strong>Player tracking (Premium):</strong> save players to your list and see their stats and next match.',
+        do7: '<strong>Player tracking:</strong> save players to your list and see their stats and next match.',
         do8: '<strong>Android notifications:</strong> manage optional final-result alerts for teams you follow.',
+        do9: '<strong>AI match forecasts:</strong> explore the next match using standings, home and away form, and recent results.',
+        do10: '<strong>AI 1X2 quiniela:</strong> see the current matchday’s favorites and the reasons behind each pick. X means no clear favorite; matches without enough data have no pick.',
+        do11: '<strong>Club information:</strong> discover your club, its teams and available official links.',
         installTitle: 'How to install',
         iosInstall: 'For iOS, open this page on your iPhone, choose Download on the iOS card and follow the instructions on the Expo build page.',
         i1: 'Open this page on your Android phone and tap the button above.',
@@ -160,8 +166,11 @@
         do4: '<strong>Goleadores:</strong> la clasificación del Pichichi.',
         do5: '<strong>Chat con Futbot:</strong> pregunta sobre tu equipo seleccionado y recibe respuestas en español, catalán o inglés.',
         do6: '<strong>Seguimiento de equipos:</strong> sigue varios equipos y cambia entre ellos.',
-        do7: '<strong>Seguimiento de jugadores (Premium):</strong> guarda jugadores en tu lista y consulta sus estadísticas y próximo partido.',
+        do7: '<strong>Seguimiento de jugadores:</strong> guarda jugadores en tu lista y consulta sus estadísticas y próximo partido.',
         do8: '<strong>Notificaciones en Android:</strong> configura alertas opcionales de resultados finales para los equipos que sigues.',
+        do9: '<strong>Pronósticos con IA:</strong> analiza el próximo partido a partir de la clasificación, el rendimiento en casa y fuera y los resultados recientes.',
+        do10: '<strong>Quiniela con IA (AI 1X2):</strong> consulta los favoritos de la jornada actual y los motivos de cada pronóstico. X significa que no hay un favorito claro; los partidos sin datos suficientes quedan sin pronóstico.',
+        do11: '<strong>Información del club:</strong> descubre tu club, sus equipos y los enlaces oficiales disponibles.',
         installTitle: 'Cómo instalar',
         iosInstall: 'Para iOS, abre esta página en tu iPhone, elige Descargar en la tarjeta de iOS y sigue las instrucciones de la página de Expo.',
         i1: 'Abre esta página en tu móvil Android y toca el botón de arriba.',
@@ -181,8 +190,11 @@
         do4: '<strong>Golejadors:</strong> la classificació del Pichichi.',
         do5: '<strong>Xat amb Futbot:</strong> pregunta sobre el teu equip seleccionat i rep respostes en català, castellà o anglès.',
         do6: '<strong>Seguiment d’equips:</strong> segueix diversos equips i canvia entre ells.',
-        do7: '<strong>Seguiment de jugadors (Premium):</strong> desa jugadors a la teva llista i consulta les seves estadístiques i el pròxim partit.',
+        do7: '<strong>Seguiment de jugadors:</strong> desa jugadors a la teva llista i consulta les seves estadístiques i el pròxim partit.',
         do8: '<strong>Notificacions a Android:</strong> configura alertes opcionals de resultats finals per als equips que segueixes.',
+        do9: '<strong>Pronòstics amb IA:</strong> analitza el pròxim partit a partir de la classificació, el rendiment a casa i a fora i els resultats recents.',
+        do10: '<strong>Quiniela amb IA (AI 1X2):</strong> consulta els favorits de la jornada actual i els motius de cada pronòstic. X significa que no hi ha un favorit clar; els partits sense prou dades queden sense pronòstic.',
+        do11: '<strong>Informació del club:</strong> descobreix el teu club, els seus equips i els enllaços oficials disponibles.',
         installTitle: 'Com instal·lar',
         iosInstall: 'Per a iOS, obre aquesta pàgina al teu iPhone, tria Descarrega a la targeta d’iOS i segueix les instruccions de la pàgina d’Expo.',
         i1: "Obre aquesta pàgina al teu mòbil Android i toca el botó de dalt.",
